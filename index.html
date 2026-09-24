@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Personal Plan for Women 40+</title>
+<meta name="description" content="A 2-minute quiz for women 40+ in perimenopause and menopause. Get your personal training plan.">
+<meta name="theme-color" content="#FFF7F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B1216" media="(prefers-color-scheme: dark)">
+<style>
+:root{
+  --bg:#FFF7F2; --surface:#FFFFFF; --text:#26161E; --muted:#574650; --line:#E9D8D6;
+  --accent:#B3264F; --accent-ink:#FFFFFF; --accent-soft:#FCE4EA; --accent-2:#F29E4C;
+  --good:#2E7A57; --err:#B3261E;
+  --z1:#F7D2C4; --z2:#F8E5B0; --z3:#C6E6D2;
+  --pants:#4A2B3A; --shoe:#FFFFFF; --face:#3A2A2A; --lip:#B5646E;
+  --shadow:0 6px 20px rgba(80,30,45,.08);
+  --fs:18px; --fs-s:15px; --fs-h1:30px; --fs-h2:24px; --opt-h:54px; --gap:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1B1216; --surface:#281C22; --text:#F8EEF1; --muted:#D9C6CF; --line:#45343C;
+    --accent:#FF86A8; --accent-ink:#1B1216; --accent-soft:#40232F; --accent-2:#F6B26B;
+    --good:#7FD1A7; --err:#FF9C94; --z1:#5A3530; --z2:#57492A; --z3:#2F4E3D;
+    --pants:#5B3A4A; --shoe:#E9DDE2; --face:#2A1A1E; --lip:#A94F5C;
+    --shadow:0 6px 20px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1B1216; --surface:#281C22; --text:#F8EEF1; --muted:#D9C6CF; --line:#45343C;
+  --accent:#FF86A8; --accent-ink:#1B1216; --accent-soft:#40232F; --accent-2:#F6B26B;
+  --good:#7FD1A7; --err:#FF9C94; --z1:#5A3530; --z2:#57492A; --z3:#2F4E3D;
+  --pants:#5B3A4A; --shoe:#E9DDE2; --face:#2A1A1E; --lip:#A94F5C;
+  --shadow:0 6px 20px rgba(0,0,0,.35);
+}
+@media (max-height:700px){ :root{ --fs:16px; --fs-s:13.5px; --fs-h1:26px; --fs-h2:21px; --opt-h:48px; --gap:8px; } }
+@media (max-height:600px){ :root{ --fs:15px; --fs-s:12.5px; --fs-h1:23px; --fs-h2:19px; --opt-h:44px; --gap:6px; } }
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--text);font:400 var(--fs)/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+.app{max-width:480px;margin:0 auto;min-height:100%;height:100%;display:flex;flex-direction:column;padding:0 16px}
+.app.wide{max-width:760px;height:auto}
+header.top{flex:0 0 auto;padding:10px 0 6px;display:flex;flex-direction:column;gap:6px}
+.toprow{display:flex;align-items:center;gap:10px;min-height:28px}
+.back{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:var(--text)}
+.back[hidden]{visibility:hidden}
+.back:focus-visible,.opt:focus-visible,.btn:focus-visible,.chip:focus-visible,.card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.brand{font-weight:800;letter-spacing:.02em;font-size:15px;flex:1;text-align:center}
+.brand span{color:var(--accent)}
+.stepnum{font-size:var(--fs-s);color:var(--muted);min-width:32px;text-align:right;font-variant-numeric:tabular-nums}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:99px;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+main{flex:1 1 auto;display:flex;flex-direction:column;min-height:0;padding-bottom:12px}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;animation:fadeIn .35s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.eyebrow{align-self:flex-start;background:var(--accent-soft);color:var(--text);font-weight:700;font-size:var(--fs-s);padding:5px 12px;border-radius:99px;margin:4px 0 8px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:var(--fs-h1);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+h1 .l{display:block}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:var(--fs-h2);line-height:1.2;font-weight:700;margin:6px 0 4px}
+.sub{color:var(--muted);font-size:var(--fs-s);margin-top:2px}
+.lead{color:var(--muted);margin-top:8px}
+.lead .l{display:block}
+.q{margin-top:8px}
+.opts{display:flex;flex-direction:column;gap:var(--gap);margin-top:12px}
+.opt{min-height:var(--opt-h);width:100%;text-align:left;background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:8px 14px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow);opacity:0;animation:optIn .4s ease forwards;transition:transform .12s ease,border-color .2s,background .2s;line-height:1.25}
+.opt:active{transform:scale(.98)}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft)}
+.opt .box{flex:0 0 22px;height:22px;border-radius:7px;border:2px solid var(--muted);display:grid;place-items:center}
+.opt.sel .box{background:var(--accent);border-color:var(--accent)}
+.opt.sel .box::after{content:"";width:10px;height:6px;border:solid var(--accent-ink);border-width:0 0 2.5px 2.5px;transform:rotate(-45deg) translate(1px,-1px)}
+.opt .dot{flex:0 0 10px;height:10px;border-radius:50%;background:var(--accent-soft);border:2px solid var(--accent)}
+.opt.sel .dot{background:var(--accent)}
+@keyframes optIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.big .opt{justify-content:center;font-weight:700;font-size:calc(var(--fs) + 2px)}
+.hero{flex:1 1 auto;min-height:0;max-height:230px;display:flex;justify-content:center;margin:8px 0 0}
+.hero svg{height:100%;width:auto;max-width:100%}
+.hero img{height:100%;min-height:0;width:auto;max-width:34%;object-fit:contain;margin:0 -2px;opacity:0;animation:optIn .5s ease forwards}
+.hero img:nth-child(2){position:relative;z-index:1;animation-delay:.12s}.hero img:nth-child(3){animation-delay:.24s}
+.fig{display:block;user-select:none;-webkit-user-drag:none}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:12px;flex:1;min-height:0;max-height:420px}
+.card{background:var(--surface);border:2px solid var(--line);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:6px 6px 8px;gap:2px;font-weight:700;box-shadow:var(--shadow);opacity:0;animation:optIn .4s ease forwards;min-height:0;overflow:hidden}
+.card svg,.card img{flex:1;min-height:0;width:100%;object-fit:contain}
+.card.sel{border-color:var(--accent);background:var(--accent-soft)}
+.btn{display:block;width:100%;min-height:54px;border-radius:14px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:calc(var(--fs) + 1px);box-shadow:0 8px 20px rgba(179,38,79,.25);transition:transform .12s,opacity .2s}
+.btn:active{transform:scale(.98)}
+.btn[disabled]{opacity:.45;box-shadow:none;cursor:not-allowed}
+.footer{flex:0 0 auto;margin-top:16px}
+.terms{font-size:12.5px;color:var(--muted);text-align:center;margin-top:8px}
+/* aha */
+.aha{gap:6px}
+.aha .kicker{font-size:var(--fs-s);font-weight:800;color:var(--accent)}
+.aha .viz{flex:0 1 auto;min-height:70px;max-height:190px;display:flex;align-items:center;justify-content:center;margin:6px 0}
+.aha .viz svg{width:100%;height:100%;max-height:190px}
+.aha p.small{font-size:var(--fs-s);color:var(--muted)}
+.aha .strong{font-weight:800}
+.src{font-size:12px;color:var(--muted);font-style:italic}
+.bignum{font-family:Georgia,serif;font-size:calc(var(--fs-h1) * 1.8);font-weight:700;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+/* zones */
+.zonewrap{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;margin:6px 0}
+.zonewrap svg{height:100%;max-height:260px;width:auto}
+.zfig{position:relative;height:100%;max-height:270px;aspect-ratio:303/760}
+.zfig img{width:100%;height:100%}
+.zhl{position:absolute;inset:0;background:var(--accent);-webkit-mask:var(--m) center/100% 100% no-repeat;mask:var(--m) center/100% 100% no-repeat;opacity:0;transition:opacity .3s;pointer-events:none}
+.zhl.on{opacity:.6;animation:zp 1.8s ease-in-out infinite}
+@keyframes zp{50%{opacity:.38}}
+@media (prefers-reduced-motion:reduce){.zhl.on{animation:none}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip{min-height:44px;padding:8px 14px;border-radius:99px;background:var(--surface);border:2px solid var(--line);font-weight:600;font-size:var(--fs-s);opacity:0;animation:optIn .4s ease forwards}
+.chip.sel{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.zone-shape{fill:var(--accent);opacity:0;transition:opacity .3s}
+.zone-shape.on{opacity:.5}
+/* loader */
+.loader{justify-content:center;gap:14px}
+.ring{width:96px;height:96px;margin:0 auto}
+.checks{list-style:none;display:flex;flex-direction:column;gap:10px}
+.checks li{display:flex;gap:10px;align-items:center;opacity:.35;transition:opacity .3s}
+.checks li.done{opacity:1}
+.checks .tick{width:24px;height:24px;border-radius:50%;border:2px solid var(--accent);display:grid;place-items:center;flex:0 0 24px}
+.checks li.done .tick{background:var(--accent)}
+.checks li.done .tick::after{content:"";width:9px;height:5px;border:solid var(--accent-ink);border-width:0 0 2.5px 2.5px;transform:rotate(-45deg)}
+/* result */
+.result{gap:8px}
+.pcard{background:var(--surface);border:2px solid var(--accent);border-radius:18px;padding:10px 14px;display:flex;gap:12px;align-items:center;box-shadow:var(--shadow)}
+.pcard>svg{flex:0 0 50px;height:50px}
+.pcard .type{font-family:Georgia,serif;font-weight:700;font-size:calc(var(--fs) + 3px);line-height:1.15}
+.pcard .tag{font-size:var(--fs-s);color:var(--muted);line-height:1.3}
+.scoreline{display:flex;align-items:center;gap:8px;font-size:var(--fs-s);color:var(--muted);line-height:1.1}
+.scoreline .sl{max-width:92px}
+.scoreline b{font-family:Georgia,serif;font-size:calc(var(--fs) + 10px);color:var(--text);font-variant-numeric:tabular-nums}
+.zonebadge{display:inline-block;white-space:nowrap;margin-left:auto;padding:3px 10px;border-radius:99px;font-weight:700;font-size:var(--fs-s);color:var(--text)}
+.explain{font-size:var(--fs-s);line-height:1.35}
+.gcard{background:var(--surface);border:2px solid var(--accent);border-radius:18px;padding:6px 14px;box-shadow:var(--shadow);margin-top:6px}
+.gi{display:flex;gap:12px;align-items:center;padding:10px 0;opacity:0;animation:optIn .4s ease forwards}
+.gi+.gi{border-top:1px solid var(--line)}
+.gi .gic{flex:0 0 36px;height:36px;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center}
+.gi .k{font-size:12.5px;color:var(--muted);font-weight:600}
+.gi b{display:block;line-height:1.25}
+@media (max-height:600px){.gi{padding:6px 0}.gi .gic{flex-basis:30px;height:30px}}
+.duo{display:flex;align-items:flex-end;justify-content:space-around;height:118px;flex:0 0 auto}
+@media (max-height:700px){ .duo{height:96px} }
+@media (max-height:600px){ .duo{height:74px} }
+.duo figure{display:flex;flex-direction:column;align-items:center;height:100%}
+.duo figure svg{flex:1;min-height:0;height:100%;width:auto}
+.duo figcaption{font-size:12px;color:var(--muted);white-space:nowrap}
+.duo figcaption b{color:var(--text)}
+.duo .arrow{align-self:center;color:var(--accent);font-size:26px;font-weight:800}
+.peek{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:6px 12px;font-size:var(--fs-s);position:relative;overflow:hidden}
+.peek li{list-style:none;padding:2px 0}
+.peek .blur{filter:blur(5px);user-select:none}
+.peek .lock{position:absolute;right:10px;bottom:6px;font-size:12px;font-weight:700;color:var(--accent);background:var(--surface);padding:2px 8px;border-radius:99px}
+.form{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.form label{font-weight:700;font-size:var(--fs-s)}
+.input{min-height:50px;border-radius:12px;border:2px solid var(--line);padding:0 14px;font:inherit;background:var(--surface);color:var(--text);width:100%}
+.input:focus{outline:none;border-color:var(--accent)}
+.input.bad{border-color:var(--err)}
+.err{color:var(--err);font-size:13px;font-weight:600}
+.err:empty{display:none}
+.row{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--muted)}
+.row input{width:18px;height:18px;accent-color:var(--accent)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+@media (max-height:600px){
+  .pcard{padding:6px 12px} .pcard>svg{flex-basis:40px;height:40px}
+  .result{gap:5px} .input{min-height:44px} .btn{min-height:48px}
+  .peek{padding:4px 12px} .peek li.blur{display:none} .form{gap:4px}
+}
+/* final page */
+.fp{padding-bottom:110px}
+.fp section{margin-top:36px}
+.fp h3{font-family:Georgia,serif;font-size:calc(var(--fs) + 8px);margin-bottom:14px;line-height:1.2}
+.ng{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:6px;margin-top:10px}
+.ng figure{display:flex;flex-direction:column;align-items:center}
+.ng figure svg,.ng figure img{height:220px;width:auto}
+.ng figcaption{font-weight:700;font-size:var(--fs-s);color:var(--muted);margin-top:4px}
+.ng .chev{align-self:center;font-size:40px;color:var(--accent);font-weight:800;opacity:.7}
+.ngt{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:8px;background:var(--surface)}
+.ngt>div{padding:12px 16px}
+.ngt>div+div{border-left:1px solid var(--line)}
+.ngt h4{text-align:center;font-size:var(--fs);margin-bottom:8px}
+.ngt .k{font-size:13px;color:var(--muted);margin-top:6px}
+.ngt .v{font-weight:800;color:var(--accent);font-size:calc(var(--fs) + 2px)}
+.dash{display:flex;gap:4px;margin-top:4px}
+.dash i{flex:1;height:5px;border-radius:3px;background:var(--line)}
+.dash i.on{background:var(--accent)}
+.disc{font-size:11.5px;color:var(--muted);text-align:center;margin-top:8px}
+.sumgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.tile .k{font-size:13px;color:var(--muted)}
+.tile .v{font-weight:800;font-size:calc(var(--fs) + 2px);margin-top:2px}
+.tile.w{grid-column:1/-1}
+.srows{margin-top:10px;padding:4px 16px}
+.sr{padding:12px 0;opacity:0;animation:optIn .4s ease forwards}
+.sr+.sr{border-top:1px solid var(--line)}
+.sr .k{display:block;font-size:13px;color:var(--muted)}
+.sr b{display:block;font-size:calc(var(--fs) + 1px);line-height:1.3;margin-top:2px}
+.sr .sx{display:block;font-size:var(--fs-s);color:var(--muted);margin-top:3px;line-height:1.4}
+.sumout{margin-top:12px;background:var(--accent-soft);border-radius:16px;padding:16px;text-align:center}
+.sumout p{line-height:1.45;margin-bottom:12px}
+.sumout p b{display:block;font-family:Georgia,serif;font-size:calc(var(--fs) + 4px);margin-bottom:4px;text-wrap:balance}
+.sumout .btn{max-width:360px;margin:0 auto}
+.gauge{position:relative;height:12px;border-radius:99px;background:linear-gradient(90deg,var(--z1) 0 40%,var(--z2) 40% 70%,var(--z3) 70%);margin:14px 0 6px}
+.gauge b{position:absolute;top:-7px;width:26px;height:26px;margin-left:-13px;border-radius:50%;background:var(--accent);border:4px solid var(--surface);box-shadow:var(--shadow);transition:left 1.2s cubic-bezier(.2,.8,.2,1)}
+.gl{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.feat{display:flex;flex-direction:column;gap:14px}
+.feat div{display:flex;gap:14px;align-items:flex-start}
+.feat .ic{flex:0 0 46px;height:46px;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center}
+.feat b{display:block}
+.feat span{font-size:var(--fs-s);color:var(--muted)}
+.weeks{position:relative;border-radius:16px;overflow:hidden}
+.wk{display:grid;grid-template-columns:28px repeat(7,minmax(40px,1fr));gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;margin-bottom:8px}
+.wk .wl{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12.5px;color:var(--muted);text-align:center;font-weight:700}
+.wk .d{background:var(--bg);border-radius:10px;padding:6px 1px;text-align:center;font-size:11px;line-height:1.25;overflow-wrap:normal}
+.wk .d i{display:block;font-style:normal;white-space:nowrap}
+@media (max-width:420px){.wk{gap:3px;padding:6px}.wk .d{font-size:9.5px;letter-spacing:-.2px}}
+.wk .d b{display:block;font-size:12.5px}
+.wk.blur{filter:blur(4px);opacity:.7}
+.weeks .over{position:absolute;right:-6px;bottom:0;height:88%;pointer-events:none}
+.weeks .over img{height:100%;width:auto}
+.goals{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;list-style:none}
+.goals li{position:relative;padding-left:30px;font-size:var(--fs-s)}
+.goals li::before{content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;border:2px solid var(--accent)}
+.goals li::after{content:"";position:absolute;left:6px;top:5px;width:8px;height:5px;border:solid var(--accent);border-width:0 0 2px 2px;transform:rotate(-45deg)}
+.laurel{display:flex;align-items:center;justify-content:center;gap:10px;text-align:center}
+.laurel .n{font-size:calc(var(--fs) + 10px);font-weight:800;font-family:Georgia,serif;line-height:1.15}
+.laurel .t{max-width:260px;margin:4px auto 0}
+.laurel .t{font-size:var(--fs-s);color:var(--muted)}
+.rating{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center;margin:12px auto 0;max-width:420px;font-size:13px;color:var(--muted)}
+.rating .stars{color:var(--accent-2);font-size:18px;letter-spacing:2px}
+.rating b{color:var(--accent)}
+.ratingnote{text-align:center;font-weight:800;margin-top:12px}
+.plans{display:flex;flex-direction:column;gap:12px}
+.plan{position:relative;background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;text-align:left;width:100%;gap:10px}
+.plan.sel{border-color:var(--accent);background:var(--accent-soft)}
+.plan .radio{flex:0 0 22px;height:22px;border-radius:50%;border:2px solid var(--muted)}
+.plan.sel .radio{border:7px solid var(--accent)}
+.plan .pmain{flex:1}
+.plan .pname{font-weight:800}
+.plan .pprice{font-size:var(--fs-s);color:var(--muted)}
+.plan .pday{text-align:right;font-weight:800;font-size:calc(var(--fs) + 6px)}
+.plan .pday small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.plan .badge{position:absolute;top:-11px;left:14px;background:var(--accent);color:var(--accent-ink);font-size:11.5px;font-weight:800;padding:2px 10px;border-radius:99px}
+.fine{font-size:12.5px;color:var(--muted);margin-top:10px}
+.checklist{list-style:none}
+.checklist li{padding:5px 0 5px 30px;position:relative}
+.checklist li::before{content:"";position:absolute;left:6px;top:11px;width:12px;height:7px;border:solid var(--good);border-width:0 0 3px 3px;transform:rotate(-45deg)}
+.revs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:thin}
+.rev{flex:0 0 min(290px,82%);scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;font-size:var(--fs-s)}
+.rev .who{display:flex;align-items:center;gap:10px;font-weight:800}
+.rev .who i{width:32px;height:32px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;font-style:normal;color:var(--accent)}
+.rev .foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+.rev .stars{color:var(--accent-2);letter-spacing:1px}
+.rev .ver{font-size:11.5px;color:var(--good);font-weight:800}
+.helped{text-align:center;margin-bottom:14px}
+.helped .n{font-size:calc(var(--fs) + 18px);font-weight:800;display:block}
+.faq details{background:var(--surface);border-radius:12px;padding:12px 14px;margin-bottom:8px;border:1px solid var(--line)}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{margin-top:6px;font-size:var(--fs-s);color:var(--muted)}
+.fab.off{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(20px)}
+.fab{transition:opacity .25s,transform .25s;position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(420px,calc(100% - 32px));z-index:20;animation:pulse 2.2s ease-in-out infinite}
+.fab .btn{display:flex;align-items:center;justify-content:center;gap:10px}
+@keyframes pulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.035)}}
+.toast{margin-top:10px;font-size:var(--fs-s);color:var(--good);font-weight:700;text-align:center}
+@media (min-width:700px){ .ng figure svg,.ng figure img{height:300px} }
+@media (max-width:420px){ .ng figure svg,.ng figure img{height:200px} .goals{grid-template-columns:1fr} }
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="top" id="top">
+    <div class="toprow">
+      <button class="back" id="back" aria-label="Back" hidden>
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="brand">RE<span>VERA</span></div>
+      <div class="stepnum" id="stepnum" data-testid="stepnum"></div>
+    </div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="10" id="barwrap"><i id="bar"></i></div>
+  </header>
+  <main id="main" aria-live="polite"></main>
+</div>
+
+<script>
+/* =====================================================================
+   FLOW: all quiz content lives here. Edit copy in one place.
+   ===================================================================== */
+const TOTAL_STEPS = 10;
+
+const FLOW = [
+  /* ---------- Step 1: landing + age ---------- */
+  { id:'age', type:'single', step:1, landing:true,
+    eyebrow:'For women 40+',
+    titleLines:['Your body changed.','Your workouts should too.'],
+    subLines:['Take a 2-minute quiz and get your','personal training plan.'],
+    question:"What's your age?",
+    big:true,
+    options:[ {v:'40-49',label:'40–49'}, {v:'50-59',label:'50–59'}, {v:'60+',label:'60+'} ],
+    terms:'By continuing, you agree to our Terms and Privacy Policy.' },
+
+  /* ---------- Step 2: stage ---------- */
+  { id:'stage', type:'single', step:2,
+    question:'Where are you in your menopause journey?',
+    options:[
+      {v:'maybe',label:'I think I may be in perimenopause', words:'early perimenopause'},
+      {v:'peri',label:"I'm in perimenopause", words:'perimenopause'},
+      {v:'meno',label:"I'm in menopause", words:'menopause'},
+      {v:'post',label:"I'm postmenopausal", words:'postmenopause'},
+      {v:'unsure',label:"I'm not sure", words:'midlife'} ] },
+
+  /* ---------- Step 3: reason (multi) ---------- */
+  { id:'reason', type:'multi', step:3,
+    question:'What brought you here today?',
+    sub:'Pick all that feel true right now.',
+    options:[
+      {v:'changed',label:'My body has changed and I want to feel like myself again', type:'rule'},
+      {v:'weight',label:"I'm gaining weight, especially around my waist", type:'rule'},
+      {v:'energy',label:'I have less energy than I used to', type:'battery'},
+      {v:'workouts',label:"My old workouts aren't giving me the same results", type:'stalled'},
+      {v:'stronger',label:'I want to get stronger and protect my health long-term', type:'strength'},
+      {v:'unsure',label:"I'm not sure how I should train at this stage", type:'clarity'} ] },
+
+  /* ---------- Aha 1: you're not alone ---------- */
+  { id:'aha1', type:'aha', afterStep:3, viz:'people',
+    stageLine:{
+      maybe:["You're not imagining it.","Early changes like this are very common."],
+      peri:["You're not alone.","Changes like this are very common in perimenopause."],
+      meno:["You're not alone.","Changes like this are very common in menopause."],
+      post:["You're not alone.","Many women feel this after menopause too."],
+      unsure:["You're not alone.","Changes like this are very common in midlife."] },
+    reasonLine:{
+      changed:{pct:79, big:false, text:'Most women notice several changes at once: 79% have low energy, 74% sleep problems, 70% weight gain.', src:'Health & Her survey of 19,000+ US women, 2025'},
+      weight:{pct:70, big:true, text:'of women in perimenopause and menopause say they’ve gained weight.', src:'Health & Her survey of 19,000+ US women, 2025'},
+      energy:{pct:79, big:true, text:'of women in perimenopause and menopause say their energy is low. It’s the most common change of all.', src:'Health & Her survey of 19,000+ US women, 2025'},
+      workouts:{pct:null, text:'From our 30s, we slowly lose muscle, about 3–8% every 10 years. That’s why the same workout gives you less than before.', src:'The Menopause Society'},
+      stronger:{pct:72, big:true, text:'of women aged 40–65 say their health is their main reason to exercise. You’re in good company.', src:'Wasley & Gailey, Post Reproductive Health, 2024'},
+      unsure:{pct:null, text:'With so much mixed advice out there, most women feel the same. You don’t need more advice, just one clear plan.', src:''} },
+    good:'The good news: the right training can make a real difference.',
+    tease:"We'll build it into your personal plan." },
+
+  /* ---------- Step 4: activity now (multi, score 35) ---------- */
+  { id:'activity', type:'multi', step:4,
+    question:'What does your activity look like right now?',
+    sub:'Pick all that apply.',
+    exclusive:'inactive',
+    options:[
+      {v:'inactive',label:"I'm not very active right now",pts:7, does:"you're just getting started"},
+      {v:'walk',label:'I walk regularly',pts:16, does:'you walk regularly', dv:'walk regularly'},
+      {v:'yoga',label:'I do yoga or Pilates',pts:20, does:'you do yoga or Pilates', dv:'do yoga or Pilates'},
+      {v:'cardio',label:'I mostly do cardio',pts:18, does:'you do cardio', dv:'do cardio'},
+      {v:'strength',label:'I do strength training',pts:35, does:'you do strength training', dv:'do strength training'},
+      {v:'mix',label:'I mix different types of workouts',pts:28, does:'you mix different workouts', dv:'mix different workouts'},
+      {v:'varies',label:'It changes from week to week',pts:14, does:'your activity changes week to week', dv:'stay active, even if it changes week to week'} ] },
+
+  /* ---------- Step 5: body shape ---------- */
+  { id:'shape', type:'cards', step:5,
+    question:'Which body shape feels closest to yours today?',
+    sub:"There's no right or wrong answer. It helps us choose the right movements for you.",
+    options:[ {v:'slim',label:'Slim',k:0}, {v:'average',label:'Average',k:1}, {v:'curvy',label:'Curvy',k:2}, {v:'fuller',label:'Fuller figure',k:3} ] },
+
+  /* ---------- Step 6: zones ---------- */
+  { id:'zones', type:'zones', step:6,
+    question:'Where do you notice the change most?',
+    sub:'Pick all that apply.',
+    options:[ {v:'waist',label:'Belly and waist',word:'waist',focus:'waist'}, {v:'arms',label:'Arms',word:'arms',focus:'arms'}, {v:'hips',label:'Hips and thighs',word:'hips and thighs',focus:'hips and thighs'}, {v:'back',label:'Back and posture',word:'back',focus:'back and posture'}, {v:'full',label:'Full body',word:'waist',focus:'whole body'} ] },
+
+  /* ---------- Aha 2: body math ---------- */
+  { id:'aha2', type:'aha', afterStep:6, viz:'plates',
+    title:'Same meals. Fewer calories used.',
+    byAge:{
+      '40-49':{l1:'By your 50s, your body will need about 200 fewer calories a day to stay at the same weight. The reason: we slowly lose muscle with age, and muscle is what uses energy.', l2:'Without a change, women gain about 0.7 kg a year in their 50s, often around the [zone].', out:'Start now and you’re ahead of it. Strong muscles are the answer, not eating less.', from:'Today', to:'Your 50s', kg:true},
+      '50-59':{l1:'In your 50s, your body needs about 200 fewer calories a day to stay at the same weight. The reason: we slowly lose muscle with age, and muscle is what uses energy.', l2:'On average, women gain about 0.7 kg a year in their 50s, often around the [zone].', out:'The answer isn’t eating less. It’s keeping your muscles strong.', from:'At 35', to:'Today', kg:true},
+      '60+':{l1:'Since your 50s, your body has needed about 200 fewer calories a day than before. The reason: we slowly lose muscle with age, and muscle is what uses energy.', l2:'That’s why many women gain around the [zone], and why everyday things can start to feel harder.', out:'Strong muscles help you stay steady, active and independent. It’s never too late to build them.', from:'At 45', to:'Today', kg:false} },
+    close:'That’s exactly what your personal plan is built for.',
+    src:'Sources: Mayo Clinic; The Menopause Society' },
+
+  /* ---------- Step 7: past 3 months (score 35) ---------- */
+  { id:'recent', type:'single', step:7,
+    question:'How often have you been active in the past 3 months?',
+    options:[
+      {v:'none',label:"Not at all yet, but I'm ready to start",pts:7},
+      {v:'1',label:'Once a week or less',pts:14},
+      {v:'2-3',label:'2–3 times a week',pts:26},
+      {v:'4+',label:'4 or more times a week',pts:35} ] },
+
+  /* ---------- Step 8: time belief ---------- */
+  { id:'time', type:'single', step:8,
+    question:'How much time a day do you think it takes to actually feel a difference?',
+    options:[ {v:'60',label:'1 hour or more',mins:60,plan:'15–30',lo:15,hi:30},
+              {v:'30',label:'30 minutes',mins:30,plan:'15–30',lo:15,hi:30},
+              {v:'15',label:'15 minutes',mins:15,plan:'15',lo:15,hi:15},
+              {v:'5',label:'5 minutes',mins:5,plan:'5–15',lo:5,hi:15} ] },
+
+  /* ---------- Aha 3: minutes matter ---------- */
+  { id:'aha3', type:'aha', afterStep:8, viz:'minutes',
+    title:'A few minutes a day really matters.',
+    fact:'In a large study of adults who didn’t exercise at all, just 3 to 4 minutes a day of short, brisk activity, like climbing stairs or walking fast, was linked to about 18% lower cancer risk.',
+    byAnswer:{
+      '60':'You thought it takes 1 hour. Good news: it takes much less. Your plan: 15–30 minutes a day.',
+      '30':'You thought it takes 30 minutes. Your plan fits that: 15–30 minutes a day.',
+      '15':'You’re right on track. Your plan: 15 minutes a day.',
+      '5':'You’re right: even 5 minutes counts. Your plan starts at 5–15 minutes a day and grows with you.' },
+    tail:'Plus a 5‑minute version for busy or tired days. Something is always better than nothing.',
+    src:'Stamatakis et al., summarised by World Cancer Research Fund' },
+
+  /* ---------- Step 9: barriers (score 30) ---------- */
+  { id:'barriers', type:'multi', step:9,
+    question:'What has made it hard to stay active before?',
+    sub:'Pick all that apply.',
+    exclusive:'nothing',
+    priority:['joints','tired','dunno','hard','time','motivation'],
+    options:[
+      {v:'joints',label:'Aches or stiff joints', hold:'stiff joints', first:'Gentle strength moves, no jumping, [lo] minutes'},
+      {v:'tired',label:'Feeling too tired', hold:'feeling too tired', first:'[lo] minutes, 3 times, with the 5‑minute version on tired days'},
+      {v:'time',label:'Not enough time', hold:'not enough time', first:'[lo] minutes, 3 times this week'},
+      {v:'dunno',label:"I didn't know what to do", hold:'not knowing what to do', first:'Day 1 of your plan, every move explained'},
+      {v:'hard',label:'Workouts felt too hard', hold:'workouts that felt too hard', first:'The easy version of each move for the first week'},
+      {v:'motivation',label:'I lost motivation', hold:'losing motivation', first:'3 short sessions this week, ticked off in the app'},
+      {v:'nothing',label:"Nothing, I'm ready to go", hold:null, first:null} ] },
+
+  /* ---------- Step 10: desires ---------- */
+  { id:'desires', type:'multi', step:10,
+    question:'What would you love to feel more of?',
+    sub:'Pick all that apply.',
+    options:[
+      {v:'energy',label:'More energy for my day',goal:'more energy for your day'}, {v:'sleep',label:'Better sleep',goal:'better sleep'}, {v:'strong',label:'Stronger muscles and bones',goal:'stronger muscles and bones'},
+      {v:'stiff',label:'Less stiffness and aches',goal:'less stiffness and aches'}, {v:'clothes',label:'Comfortable in my clothes again',goal:'feeling comfortable in your clothes again'},
+      {v:'steady',label:'Steady and confident on my feet',goal:'feeling steady and confident on your feet'}, {v:'myself',label:'Like myself again',goal:'feeling like yourself again'} ] },
+
+  /* ---------- Loader ---------- */
+  { id:'loader', type:'loader', afterStep:10, ms:3000,
+    title:'Building your personal plan…',
+    lines:['Matching movements to your stage','Focusing on your [focus]','Keeping it joint-friendly','Fitting it into [plan] minutes a day'] },
+
+  /* ---------- Result + email ---------- */
+  { id:'result', type:'result',
+    types:{
+      rule:{name:'The Rule Changer', tag:"Your body changed the rules. Your routine hasn't caught up yet."},
+      battery:{name:'The Low-Battery Starter', tag:'Your energy is low, not your potential. Small steps first.'},
+      stalled:{name:'The Stalled Achiever', tag:"You've got the discipline. You need a new mix."},
+      strength:{name:'The Strength Builder', tag:"You're thinking long-term. Strength is your best investment now."},
+      clarity:{name:'The Clarity Seeker', tag:"You don't need more advice. You need one clear plan."} },
+    zones:[
+      {min:0,max:39,name:'Fresh start',color:'var(--z1)',text:"Your routine doesn't match what your body needs yet. The good news: this is where the biggest improvements happen."},
+      {min:40,max:69,name:'Ready to rebuild',color:'var(--z2)',text:'You have a good base. A few simple changes will make the biggest difference.'},
+      {min:70,max:100,name:'Strong foundation',color:'var(--z3)',text:"You're doing a lot right. Your plan fine-tunes it for this stage of life."} ],
+    strengths:{activity:"You're already moving", recent:'You already have a steady rhythm', barriers:'Only a few things stand in your way', none:"You've taken the first step: you're here"},
+    axisHold:{activity:{hold:'not enough strength work',first:'2 strength sessions this week'}, recent:{hold:'not moving often enough yet',first:'[lo] minutes, 3 times this week'}},
+    emailQ:'Where should we send your personal plan?',
+    cta:'Send my plan', note:'No spam. Unsubscribe anytime.', optin:'Send me tips and offers too',
+    badEmail:'Please check your email address.' },
+
+  /* ---------- Final page (after email), Revera final page ---------- */
+  { id:'final', type:'final',
+    disclaimer:'Illustrations and forecasts are for motivation only. They are not a promise of results. Individual results vary.',
+    features:[
+      ['A structured workout plan','tailored to your age, stage and body shape'],
+      ['[plan] minutes a day','gentle strength, walking and mobility, at home'],
+      ['Step by step','every move explained, with an easier version for tired days'] ],
+    fullPlan:['Joint-friendly, no jumping','No equipment needed','Clear videos, every move explained','Standing and chair options'],
+    socialN:'Made for women 40+', socialT:'gentle strength training for perimenopause, menopause and beyond',
+    helpedN:'Women like you', helpedT:'on starting strength training later in life',
+    reviews:[
+      {n:'Barbara', t:"I like the gentle way of getting into movement of the muscles and the breathing and the way it makes me forget, that I'm spending time to get to the end of a strenuous workout! I look forward to each day of the exercise."},
+      {n:'Janet', t:"This is a great workout. I'm not going to lie, it is not easy and you will feel it. I am 58 and need to lose weight and get back to a healthy me. This program is help me to do that. However, in the end you have to be dedicated to doing the workouts. No program can make you."},
+      {n:'Amy C', t:"Great! I enjoy the workouts given to me daily. The other workouts I can choose to add on are great. I'm seeing results without killing myself."},
+      {n:'Hana Tayar', t:'Beautiful exercises. I never missed on the sessions. Easy to handle and relaxing exercises'},
+      {n:'Jas', t:'Great exercises, very effective, which helped me get on a better Fitness Level. Thanks for the experience!'} ],
+    reviewNote:'Placeholder reviews for the prototype. Real Revera reviews go here before launch.',
+    plans:[
+      {v:'1m',name:'1-month plan',price:15.19,full:39.99,days:30,renew:'then $39.99 every month'},
+      {v:'3m',name:'3-month plan',price:25.99,full:69.99,days:90,renew:'then $69.99 every 3 months',badge:'Matches your 12-week plan'},
+      {v:'6m',name:'6-month plan',price:49.99,full:129.99,days:180,renew:'then $129.99 every 6 months'} ],
+    defaultPlan:'3m',
+    faq:[
+      ['Is this safe for me?','Every move has an easier version, and the plan starts gently. If you have a health condition, check with your doctor first.'],
+      ['My joints hurt.','No jumping, gentle warm-ups, standing and chair options.'],
+      ["I'm too tired most days.",'Every workout has a 5‑minute version for low days.'],
+      ["I've never done strength training.",'No experience needed. Every move is explained step by step.'],
+      ['Is this really made for menopause?','Your plan is built around your stage, age, energy and joints.'],
+      ['Can I cancel?','Yes, anytime in your account settings.'] ] }
+];
+
+/* =====================================================================
+   Engine
+   ===================================================================== */
+const $ = (s,el=document)=>el.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const F = id => FLOW.find(x=>x.id===id);
+const state = { answers:{}, idx:0, history:[], email:'', optin:false, plan:null };
+const main=$('#main'), bar=$('#bar'), stepnum=$('#stepnum'), backBtn=$('#back');
+
+function opt(id,v){ return F(id).options.find(o=>o.v===v); }
+function firstSel(id){ const a=state.answers[id]||[]; const o=F(id).options.find(x=>a.includes(x.v)); return o||null; }
+function zoneOpt(){ return firstSel('zones') || opt('zones','waist'); }
+function timeOpt(){ return state.answers.time ? opt('time',state.answers.time) : opt('time','15'); }
+function fill(s){ const t=timeOpt(); return s.replace(/\[zone\]/g, zoneOpt().word).replace(/\[focus\]/g, zoneOpt().focus).replace(/\[plan\]/g, t.plan).replace(/\[lo\]/g, t.lo); }
+function shapeK(){ const s=state.answers.shape; return s? opt('shape',s).k : 1; }
+const SHAPE_IMG=['img/shape-1.webp','img/shape-2.webp','img/shape-3.webp','img/shape-4.webp'], FIT_IMG='img/shape-fit.webp';
+function goalImg(k){ return k>=2 ? SHAPE_IMG[k-1] : FIT_IMG; }  // 4→3, 3→2, 2→fit, 1→fit
+function figImg(src, alt=''){ return `<img class="fig" src="${src}" alt="${esc(alt)}" draggable="false" decoding="async">`; }
+// zone rectangles in % of the figure box [x0,y0,x1,y1]; the highlight is clipped to the silhouette via mask
+const ZR=[
+  {arms:[[15,19,31,56],[69,19,85,56]], waist:[[32,33,70,47]], hips:[[27,47,76,72]]},
+  {arms:[[11,19,29,56],[71,19,89,56]], waist:[[29,33,73,47]], hips:[[22,47,81,72]]},
+  {arms:[[9,19,27,56],[73,19,91,56]],  waist:[[27,33,75,47]], hips:[[22,47,82,72]]},
+  {arms:[[1,19,24,57],[77,19,99,57]],  waist:[[23,33,78,47]], hips:[[15,47,87,72]]} ];
+function zoneFig(k){
+  const src=SHAPE_IMG[k], z={...ZR[k], back:[[0,16,100,33]], full:[[0,14,100,97]]};
+  let h=''; for(const key in z) z[key].forEach(r=>{ h+=`<div class="zhl" data-z="${key}" style="--m:url('${src}');clip-path:inset(${r[1]}% ${100-r[2]}% ${100-r[3]}% ${r[0]}%)"></div>`; });
+  return `<div class="zfig">${figImg(src)}${h}</div>`;
+}
+function ageKey(){ return state.answers.age || '50-59'; }
+
+function compute(a=state.answers){
+  const actSel=(a.activity||[]).map(v=>opt('activity',v));
+  const act = actSel.length ? Math.max(...actSel.map(o=>o.pts)) : 7;
+  const rec = a.recent? opt('recent',a.recent).pts : 7;
+  const bl = a.barriers||[];
+  const barPts = bl.includes('nothing') ? 30 : Math.max(6, 30 - 6*bl.length);
+  const score = act + rec + barPts;
+  const R = F('result');
+  const zone = R.zones.find(z=>score>=z.min && score<=z.max);
+  const forecast = Math.round(score + 0.6*(100-score));
+  const shares=[['activity',act/35],['recent',rec/35],['barriers',barPts/30]];
+  let best=shares[0]; shares.forEach(s=>{ if(s[1]>best[1]) best=s; });
+  const strength = best[1] < 0.3 ? R.strengths.none : R.strengths[best[0]];
+  const B=F('barriers'); const top=B.priority.find(p=>bl.includes(p));
+  let hold, first;
+  if(top){ const o=opt('barriers',top); hold=o.hold; first=o.first; }
+  else { const low=(act/35 <= rec/35)?'activity':'recent'; hold=R.axisHold[low].hold; first=R.axisHold[low].first; }
+  const r=(a.reason||[]); const reasonO=F('reason').options.find(o=>r.includes(o.v));
+  const typeKey = reasonO ? reasonO.type : 'rule';
+  const type = R.types[typeKey];
+  const d=(a.desires||[]).map(v=>{ const o=opt('desires',v); return o.goal||o.label.toLowerCase(); });
+  const desire = d.length ? d.slice(0,2).join(' and ') : 'feeling like yourself again';
+  const does = actSel.length ? actSel.slice(0,2).map(o=>o.does).join(' and ') : '';
+  return {score, act, rec, bar:barPts, zone, forecast, strength, hold, first:fill(first), type, typeKey, desire, does, topBarrier:top||null, reason:reasonO?reasonO.v:'changed'};
+}
+
+const SEQ = FLOW.map(x=>x.id);
+[...SHAPE_IMG, FIT_IMG].forEach(src=>{ const i=new Image(); i.src=src; });
+
+function setTop(scr){
+  const isFinal = scr.id==='final';
+  $('#top').style.display = isFinal ? 'none' : '';
+  const step = scr.step || scr.afterStep || TOTAL_STEPS;
+  const done = scr.id==='result';
+  bar.style.width = (done?100:Math.round(step/TOTAL_STEPS*100))+'%';
+  $('#barwrap').setAttribute('aria-valuenow', step);
+  stepnum.textContent = done ? '' : `${step}/${TOTAL_STEPS}`;
+  stepnum.setAttribute('data-step', step);
+  backBtn.hidden = state.history.length===0 || ['loader','result'].includes(scr.id);
+}
+function go(id, push=true){ if(push) state.history.push(state.idx); state.idx=SEQ.indexOf(id); render(); }
+function next(){ go(SEQ[state.idx+1]); }
+backBtn.addEventListener('click',()=>{ if(!state.history.length) return; state.idx=state.history.pop(); render(); });
+
+function render(){
+  const scr = FLOW[state.idx];
+  $('#app').classList.toggle('wide', scr.id==='final');
+  setTop(scr);
+  main.innerHTML='';
+  document.querySelectorAll('.fab').forEach(x=>x.remove());
+  const el=document.createElement('section'); el.className='screen'; el.dataset.screen=scr.id; main.appendChild(el);
+  window.scrollTo(0,0);
+  ({single:renderSingle, multi:renderMulti, cards:renderCards, zones:renderZones, aha:renderAha, loader:renderLoader, result:renderResult, final:renderFinal})[scr.type](scr, el);
+}
+
+function headHTML(scr){
+  if(scr.landing){
+    return `<span class="eyebrow">${esc(scr.eyebrow)}</span><h1>${scr.titleLines.map(l=>`<span class="l">${esc(l)}</span>`).join('')}</h1><p class="lead">${scr.subLines.map(l=>`<span class="l">${esc(l)}</span>`).join('')}</p><div class="hero">${figImg(SHAPE_IMG[1])}${figImg(SHAPE_IMG[2])}${figImg(SHAPE_IMG[3])}</div><h2 class="q">${esc(scr.question)}</h2>`;
+  }
+  return `<h2>${esc(scr.question)}</h2>${scr.sub?`<p class="sub">${esc(scr.sub)}</p>`:''}`;
+}
+
+function renderSingle(scr, el){
+  el.innerHTML = headHTML(scr) + `<div class="opts ${scr.big?'big':''}" role="radiogroup"></div>` + (scr.terms?`<p class="terms">${esc(scr.terms)}</p>`:'');
+  const box=$('.opts',el);
+  scr.options.forEach((o,i)=>{
+    const b=document.createElement('button');
+    b.className='opt'+(state.answers[scr.id]===o.v?' sel':''); b.style.animationDelay=(i*70)+'ms';
+    b.setAttribute('role','radio'); b.dataset.v=o.v;
+    b.innerHTML = scr.big? esc(o.label) : `<span class="dot"></span><span>${esc(o.label)}</span>`;
+    b.addEventListener('click',()=>{ state.answers[scr.id]=o.v; box.querySelectorAll('.opt').forEach(x=>x.classList.toggle('sel',x===b)); setTimeout(next,380); });
+    box.appendChild(b);
+  });
+}
+
+function renderMulti(scr, el){
+  const sel=new Set(state.answers[scr.id]||[]);
+  el.innerHTML = headHTML(scr) + `<div class="opts"></div><div class="footer"><button class="btn" data-testid="continue">Continue</button></div>`;
+  const box=$('.opts',el), cta=$('.btn',el);
+  const sync=()=>{ box.querySelectorAll('.opt').forEach(x=>x.classList.toggle('sel',sel.has(x.dataset.v))); cta.disabled=sel.size===0; };
+  scr.options.forEach((o,i)=>{
+    const b=document.createElement('button'); b.className='opt'; b.dataset.v=o.v; b.style.animationDelay=(i*60)+'ms'; b.setAttribute('role','checkbox');
+    b.innerHTML=`<span class="box"></span><span>${esc(o.label)}</span>`;
+    b.addEventListener('click',()=>{
+      if(sel.has(o.v)) sel.delete(o.v);
+      else { if(scr.exclusive){ if(o.v===scr.exclusive) sel.clear(); else sel.delete(scr.exclusive); } sel.add(o.v); }
+      sync();
+    });
+    box.appendChild(b);
+  });
+  sync();
+  cta.addEventListener('click',()=>{ state.answers[scr.id]=[...sel]; next(); });
+}
+
+function renderCards(scr, el){
+  el.innerHTML = headHTML(scr) + `<div class="grid2"></div>`;
+  const g=$('.grid2',el);
+  scr.options.forEach((o,i)=>{
+    const c=document.createElement('button'); c.className='card'+(state.answers[scr.id]===o.v?' sel':''); c.dataset.v=o.v; c.style.animationDelay=(i*70)+'ms';
+    c.innerHTML = figImg(SHAPE_IMG[o.k]) + `<span>${esc(o.label)}</span>`;
+    c.addEventListener('click',()=>{ state.answers[scr.id]=o.v; g.querySelectorAll('.card').forEach(x=>x.classList.toggle('sel',x===c)); setTimeout(next,380); });
+    g.appendChild(c);
+  });
+}
+
+function renderZones(scr, el){
+  const sel=new Set(state.answers[scr.id]||[]);
+  el.innerHTML = headHTML(scr) + `<div class="zonewrap">${zoneFig(shapeK())}</div><div class="chips"></div><div class="footer"><button class="btn" data-testid="continue">Continue</button></div>`;
+  const chips=$('.chips',el), cta=$('.btn',el);
+  const sync=()=>{ chips.querySelectorAll('.chip').forEach(c=>c.classList.toggle('sel',sel.has(c.dataset.v))); el.querySelectorAll('.zhl').forEach(z=>z.classList.toggle('on',sel.has(z.dataset.z))); cta.disabled=sel.size===0; };
+  scr.options.forEach((o,i)=>{
+    const c=document.createElement('button'); c.className='chip'; c.dataset.v=o.v; c.textContent=o.label; c.style.animationDelay=(i*60)+'ms';
+    c.addEventListener('click',()=>{ sel.has(o.v)?sel.delete(o.v):sel.add(o.v); sync(); });
+    chips.appendChild(c);
+  });
+  sync();
+  cta.addEventListener('click',()=>{ state.answers[scr.id]=[...sel]; next(); });
+}
+
+function renderAha(scr, el){
+  el.classList.add('aha');
+  let h='';
+  if(scr.id==='aha1'){
+    const c=compute();
+    const sl=scr.stageLine[state.answers.stage||'unsure'];
+    const rl=scr.reasonLine[c.reason];
+    h+=`<p class="kicker">${esc(sl[0])}</p><h2>${esc(sl[1])}</h2>`;
+    if(rl.pct){
+      h+=`<div class="viz">${peopleSVG(Math.round(rl.pct/10))}</div>`;
+      if(rl.big) h+=`<div class="bignum" data-count="${rl.pct}">0%</div>`;
+    } else {
+      h+=`<div class="viz">${c.reason==='workouts'? muscleSVG() : pathSVG()}</div>`;
+    }
+    h+=`<p>${esc(rl.text)}</p><p class="strong">${esc(scr.good)} ${esc(scr.tease)}</p>${rl.src?`<p class="src">${esc(rl.src)}</p>`:''}`;
+  }
+  if(scr.id==='aha2'){
+    const v=scr.byAge[ageKey()];
+    h+=`<h2>${esc(scr.title)}</h2><div class="viz">${platesSVG(v)}</div><p class="small">${esc(fill(v.l1))}</p><p class="small">${esc(fill(v.l2))}</p><p class="strong">${esc(v.out)} ${esc(scr.close)}</p><p class="src">${esc(scr.src)}</p>`;
+  }
+  if(scr.id==='aha3'){
+    const t=timeOpt();
+    h+=`<h2>${esc(scr.title)}</h2><div class="viz">${minutesSVG(t)}</div><p class="small">${esc(scr.fact)}</p><p class="strong">${esc(scr.byAnswer[t.v])} ${esc(scr.tail)}</p><p class="src">${esc(scr.src)}</p>`;
+  }
+  h+=`<div class="footer"><button class="btn" data-testid="gotit">Got it</button></div>`;
+  el.innerHTML=h;
+  $('.btn',el).addEventListener('click',next);
+  el.querySelectorAll('[data-count]').forEach(n=>countUp(n,+n.dataset.count,'%'));
+}
+
+function renderLoader(scr, el){
+  el.classList.add('loader');
+  el.innerHTML=`<svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="var(--line)" stroke-width="8"/><circle id="ringc" cx="50" cy="50" r="42" fill="none" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" stroke-dasharray="264" stroke-dashoffset="264" transform="rotate(-90 50 50)" style="transition:stroke-dashoffset ${scr.ms}ms linear"/></svg><h2 style="text-align:center">${esc(scr.title)}</h2><ul class="checks">${scr.lines.map(l=>`<li><span class="tick"></span><span>${esc(fill(l))}</span></li>`).join('')}</ul>`;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{ const r=$('#ringc',el); if(r) r.style.strokeDashoffset='0'; }));
+  const lis=el.querySelectorAll('.checks li');
+  lis.forEach((li,i)=>setTimeout(()=>li.classList.add('done'),(i+1)*scr.ms/(lis.length+0.5)));
+  const my=state.idx;
+  setTimeout(()=>{ if(state.idx===my){ go('result', false); } }, scr.ms+200);
+}
+
+function renderResult(scr, el){
+  el.classList.add('result');
+  const c=compute(), t=timeOpt();
+  const zs=(state.answers.zones||[]).map(v=>opt('zones',v));
+  const focus = zs.some(z=>z.v==='full') || !zs.length ? 'Whole body' : cap(zs.map(z=>z.focus).join(', '));
+  const ic=(p)=>`<span class="gic"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="${p}" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
+  el.innerHTML=`
+    <h2 style="margin-top:4px">Your personal plan is ready</h2>
+    <p class="sub">Built for your stage, ${esc(t.plan)} minutes a day.</p>
+    <div class="gcard" data-testid="goal-preview">
+      <div class="gi">${ic('M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 12h.01')}<div><span class="k">Your goal</span><b>${esc(cap(c.desire))}</b></div></div>
+      <div class="gi" style="animation-delay:.12s">${ic('M12 3v4M12 17v4M3 12h4M17 12h4M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z')}<div><span class="k">Special focus</span><b>${esc(focus)}</b></div></div>
+      <div class="gi" style="animation-delay:.24s">${ic('M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z')}<div><span class="k">We'll plan around</span><b>${esc(cap(c.hold))}</b></div></div>
+    </div>
+    <form class="form" novalidate>
+      <label for="email">${esc(scr.emailQ)}</label>
+      <input class="input" id="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" data-testid="email">
+      <input class="hp" tabindex="-1" autocomplete="off" name="website" aria-hidden="true">
+      <div class="err" id="err" data-testid="err"></div>
+      <button class="btn" type="submit" data-testid="send">${esc(scr.cta)}</button>
+      <div class="row"><input type="checkbox" id="optin"><label for="optin" style="font-weight:400">${esc(scr.optin)}</label><span style="margin-left:auto">${esc(scr.note)}</span></div>
+    </form>`;
+  const form=$('form',el), inp=$('#email',el), err=$('#err',el);
+  inp.value=state.email;
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const v=inp.value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){ err.textContent=scr.badEmail; inp.classList.add('bad'); inp.focus(); return; }
+    err.textContent=''; inp.classList.remove('bad');
+    state.email=v; state.optin=$('#optin',el).checked;
+    submitLead(c, $('.hp',el).value);
+    go('final');
+  });
+  inp.addEventListener('input',()=>{ if(err.textContent){ err.textContent=''; inp.classList.remove('bad'); } });
+}
+
+function renderFinal(scr, el){
+  el.classList.add('fp');
+  const c=compute(), k=shapeK(), age=ageKey(), t=timeOpt();
+  const st=opt('stage', state.answers.stage||'unsure').words;
+  const ageLabel=opt('age', age).label;
+  const dash=(n)=>`<div class="dash">${[0,1,2,3,4].map(i=>`<i class="${i<n?'on':''}"></i>`).join('')}</div>`;
+  const nowStr=Math.max(1,Math.round(c.act/35*5)), nowRhythm=Math.max(1,Math.round(c.rec/35*5));
+  const D=state.answers.desires||[];
+  const goals=(D.length? D.map(v=>opt('desires',v).label) : ['Feel like myself again']);
+  const peek=planPeek();
+  state.plan=state.plan||scr.defaultPlan;
+  const R=F('result');
+  const sm=buildSummary(c);
+  const icon=(p)=>`<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="${p}" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  const icons=['M4 6h16v14H4zM4 10h16M9 3v4M15 3v4M9 15l2 2 4-4','M12 7v5l3 2M12 21a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM9 3h6','M5 20l4-8 4 3 3-6 3 11M5 20h14'];
+  const days=[['D1',`${t.lo} min`,'Strength'],['D2','10 min','Walk'],['D3','','Rest'],['D4',`${t.lo} min`,'Strength'],['D5','10 min','Stretch'],['D6',`${t.hi} min`,'Strength'],['D7','','Rest']];
+  el.innerHTML=`
+    <p class="sub" style="margin-top:14px;text-align:center">Your personal plan is on its way to <b>${esc(state.email)}</b></p>
+    <h1 style="text-align:center;margin-top:10px" data-testid="final-type">${esc(c.type.name)}, your 12‑week personal plan is&nbsp;ready</h1>
+    <p class="lead" style="text-align:center">Built for women ${esc(ageLabel)} in ${esc(st)}. <span style="white-space:nowrap">${esc(t.plan)} minutes</span> a day, at home.</p>
+    <div class="ng"><figure>${figImg(SHAPE_IMG[k],'Your body shape now')}<figcaption>Now</figcaption></figure><div class="chev">»</div><figure>${figImg(goalImg(k),'Your goal')}<figcaption>Your goal</figcaption></figure></div>
+    <div class="ngt">
+      <div><h4>Now</h4><div class="k">Menopause Fitness Score</div><div class="v"><span data-testid="score">${c.score}</span>/100</div><div class="k">Strength</div>${dash(nowStr)}<div class="k">Rhythm</div>${dash(nowRhythm)}</div>
+      <div><h4>Your goal</h4><div class="k">Menopause Fitness Score</div><div class="v">${c.forecast}/100</div><div class="k">Strength</div>${dash(Math.min(5,nowStr+2))}<div class="k">Rhythm</div>${dash(Math.min(5,nowRhythm+2))}</div>
+    </div>
+    <p class="disc">${esc(scr.disclaimer)}</p>
+
+    <section><h3>Personal summary based on your answers</h3>
+      <div class="tile w"><div class="k">Menopause Fitness Score · ${esc(c.zone.name)}</div><div class="gauge"><b id="gdot" style="left:0%"></b></div><div class="gl"><span>Fresh start</span><span>Ready to rebuild</span><span>Strong foundation</span></div></div>
+      <div class="sumgrid" style="margin-top:10px">
+        <div class="tile"><div class="k">Your daily plan</div><div class="v">${esc(t.plan)} min</div></div>
+        <div class="tile"><div class="k">Strength sessions</div><div class="v">2–3 a week</div></div>
+      </div>
+      <div class="tile w srows" data-testid="final-list">
+        ${sm.rows.map((r,i)=>`<div class="sr" style="animation-delay:${i*.12}s"><span class="k">${esc(r[0])}</span><b>${esc(r[1])}</b>${r[2]?`<span class="sx">${esc(r[2])}</span>`:''}</div>`).join('')}
+      </div>
+      <div class="sumout">
+        <p><b>${esc(sm.outHead)}</b> ${esc(sm.outText)}</p>
+        <button class="btn" data-testid="summary-cta">Get my plan <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <section><h3>What you get</h3><div class="feat">${scr.features.map((f,i)=>`<div><span class="ic">${icon(icons[i])}</span><p><b>${esc(fill(f[0]))}</b><span>${esc(f[1])}</span></p></div>`).join('')}</div></section>
+
+    <section><div class="weeks">
+      <div class="wk"><div class="wl">Week 1</div>${days.map((d,i)=>`<div class="d"><b>${d[0]}</b>${i<2?`<i>${d[2]}</i><i>${d[1]}</i>`:`<span style="filter:blur(3px)"><i>${d[2]}</i><i>${d[1]}</i></span>`}</div>`).join('')}</div>
+      <div class="wk blur"><div class="wl">Week 2</div>${days.map(d=>`<div class="d"><b>${d[0]}</b><i>${d[2]}</i><i>${d[1]}</i></div>`).join('')}</div>
+      <div class="wk blur"><div class="wl">Week 3</div>${days.map(d=>`<div class="d"><b>${d[0]}</b><i>${d[2]}</i><i>${d[1]}</i></div>`).join('')}</div>
+      <div class="over">${figImg(goalImg(k))}</div>
+    </div></section>
+
+    <section><h3>Goals for your program also include</h3><ul class="goals">${goals.map(g=>`<li>${esc(g)}</li>`).join('')}</ul></section>
+
+    <section><div class="laurel">${laurel(false)}<div><div class="n">${esc(scr.socialN)}</div><div class="t">${esc(scr.socialT)}</div></div>${laurel(true)}</div>
+</section>
+
+    <section><h3>Your full plan</h3><ul class="checklist">${scr.fullPlan.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
+
+    <section id="plans"><h3>Choose your plan</h3><div class="plans"></div><p class="fine" id="renew"></p>
+      <div style="margin-top:14px"><button class="btn" data-testid="get-plan">Get my plan</button><p class="toast" id="toast" hidden>This is a prototype: checkout is not connected.</p></div></section>
+
+    <section><div class="helped">Real stories<span class="n">${esc(scr.helpedN)}</span><span class="sub">${esc(scr.helpedT)}</span></div>
+      <div class="revs">${scr.reviews.map(r=>`<div class="rev"><div class="who"><i>${esc(r.n[0])}</i>${esc(r.n)}</div><p>${esc(r.t)}</p><div class="foot"><span class="stars">★★★★★</span><span class="ver">✓ VERIFIED</span></div></div>`).join('')}</div>
+      <p class="fine">${esc(scr.reviewNote)}</p></section>
+
+    <section class="faq"><h3>Questions</h3>${scr.faq.map(f=>`<details><summary>${esc(f[0])}</summary><p>${esc(f[1])}</p></details>`).join('')}</section>`;
+  // plans
+  const plans=$('.plans',el);
+  const draw=()=>{
+    plans.innerHTML='';
+    scr.plans.forEach(p=>{
+      const b=document.createElement('button'); b.className='plan'+(state.plan===p.v?' sel':''); b.dataset.v=p.v;
+      b.innerHTML=`${p.badge?`<span class="badge">${esc(p.badge)}</span>`:''}<span class="radio"></span><div class="pmain"><div class="pname">${esc(p.name)}</div><div class="pprice"><s>$${p.full.toFixed(2)}</s> $${p.price.toFixed(2)}</div></div><div class="pday">$${(p.price/p.days).toFixed(2)}<small>per day</small></div>`;
+      b.addEventListener('click',()=>{ state.plan=p.v; draw(); });
+      plans.appendChild(b);
+    });
+    const p=scr.plans.find(x=>x.v===state.plan);
+    $('#renew',el).textContent=`You pay $${p.price.toFixed(2)} today, ${p.renew}. Cancel anytime in your account settings.`;
+  };
+  draw();
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{ const g=$('#gdot',el); if(g) g.style.left=c.score+'%'; }));
+  $('[data-testid=summary-cta]',el).addEventListener('click',()=>{ $('#plans',el).scrollIntoView({behavior:'smooth',block:'start'}); });
+  $('[data-testid=get-plan]',el).addEventListener('click',()=>{ $('#toast',el).hidden=false; });
+  // floating CTA
+  const fab=document.createElement('div'); fab.className='fab';
+  fab.innerHTML=`<button class="btn" data-testid="fab">Get my plan <span aria-hidden="true">→</span></button>`;
+  document.body.appendChild(fab);
+  $('.btn',fab).addEventListener('click',()=>{ $('#plans',el).scrollIntoView({behavior:'smooth',block:'start'}); });
+  if('IntersectionObserver' in window){ new IntersectionObserver(es=>es.forEach(e=>fab.classList.toggle('off',e.isIntersecting)),{threshold:0.15}).observe($('#plans',el)); }
+}
+
+/* ---------- helpers ---------- */
+function buildSummary(c){
+  const a=state.answers, acts=a.activity||[], t=timeOpt();
+  const stW=opt('stage',a.stage||'unsure').words;
+  const stageIn = a.stage==='post' ? 'after menopause' : 'in '+stW;
+  const fresh = acts.length===0 || (acts.length===1 && acts[0]==='inactive');
+  const hasStr = acts.includes('strength') || acts.includes('mix');
+  const dv = acts.map(v=>opt('activity',v).dv).filter(Boolean).slice(0,2).join(' and ');
+  const where = fresh ? ["A fresh start", "No old habits to undo, so we start with the right ones."]
+    : [cap(c.does), hasStr ? "That's a real base. We'll build on it, not replace it." : "That's a solid base for your heart and mood. We'll build on it."];
+  let gap;
+  if(fresh || !hasStr) gap=['Regular strength work', `It's what keeps your muscles and bones strong ${stageIn}.`];
+  else if(c.rec<26) gap=['A steady rhythm', `Strength work pays off ${stageIn} when it's regular, not occasional.`];
+  else gap=['Training built for this stage', `Smarter recovery and joint-friendly progressions ${stageIn}.`];
+  const fix={joints:'Every move is joint-friendly, no jumping.', tired:'Short sessions, plus a 5‑minute version for low days.', time:`It fits into ${t.plan} minutes, at home.`, dunno:'Every move is explained, step by step.', hard:'It starts easy and builds up with you.', motivation:'Short sessions and progress you can see.'};
+  const held = c.topBarrier ? [cap(c.hold), 'So in your plan: '+fix[c.topBarrier].charAt(0).toLowerCase()+fix[c.topBarrier].slice(1)]
+                            : [cap(c.hold), ''];
+  return {
+    rows:[ ['Where you are', where[0], where[1]], ["What's missing", gap[0], gap[1]], ["What's held you back", held[0], held[1]], ['Your first step this week', c.first, ''] ],
+    outHead: "You don't need a harder plan. You need a clear one.",
+    outText: `2–3 strength sessions a week, ${t.plan} minutes a day, built for ${stW}. Your path to ${((a.desires||[]).length? opt('desires',a.desires[0]).goal : 'feeling like yourself again')}.`
+  };
+}
+function cap(s){ return s? s.charAt(0).toUpperCase()+s.slice(1) : s; }
+function planPeek(){
+  const t=timeOpt(), joints=(state.answers.barriers||[]).includes('joints');
+  const d1 = ageKey()==='60+' ? `${t.lo}-minute gentle strength and balance, no jumping` : `${t.lo}-minute gentle strength, no jumping`;
+  const d2 = joints ? '10-minute brisk walk + stretches for stiff mornings' : '10-minute brisk walk + easy stretches';
+  return [d1,d2];
+}
+function countUp(node,to,suffix){ const t0=performance.now(),dur=1100; const tick=t=>{const k=Math.min(1,(t-t0)/dur); node.textContent=Math.round(to*(1-Math.pow(1-k,3)))+suffix; if(k<1) requestAnimationFrame(tick);}; requestAnimationFrame(tick); }
+
+function submitLead(c, hp){
+  const a=state.answers, L=(id,v)=>{const o=opt(id,v); return o?o.label:v;};
+  const payload={ email:state.email, optin:state.optin, website:hp||'',
+    answers:{ age:L('age',a.age), stage:L('stage',a.stage), reason:(a.reason||[]).map(v=>L('reason',v)), activity:(a.activity||[]).map(v=>L('activity',v)),
+      shape:L('shape',a.shape), zones:(a.zones||[]).map(v=>L('zones',v)), recent:L('recent',a.recent), time:L('time',a.time),
+      barriers:(a.barriers||[]).map(v=>L('barriers',v)), desires:(a.desires||[]).map(v=>L('desires',v)) },
+    score:c.score, zone:c.zone.name, type:c.type.name, strength:c.strength, weakness:c.hold, firstStep:c.first,
+    completedAt:new Date().toISOString(), tz:Intl.DateTimeFormat().resolvedOptions().timeZone };
+  try{ fetch('api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),keepalive:true}).catch(()=>{}); }catch(e){}
+}
+
+/* =====================================================================
+   Illustrations: one flat style for every person in the quiz
+   ===================================================================== */
+const SKINS=['#F2C6A6','#DDA37E','#B97A55','#8A5639'];
+const HAIR={'40-49':'#4A2E23','50-59':'#7B4A31','60+':'#CFC8C3'};
+const TOPS=['var(--accent)','#E0735A','#6F8FCF','#4E9A7C'];
+function woman(o){
+  const k=o.k??1, age=o.age||'50-59', skin=o.skin||SKINS[0], top=o.top||'var(--accent)', hair=o.hair||HAIR[age];
+  const S=19+2.5*k, W=11+5.5*k, H=17+6.5*k, T=9+3*k, cx=60;
+  const armW=9+1.4*k;
+  let hairBack='', hairFront='';
+  if(age==='40-49'){
+    hairBack=`<path d="M43 30 Q43 12 60 12 Q77 12 77 30 L80 70 Q72 76 66 66 L66 46 L54 46 L54 66 Q48 76 40 70 Z" fill="${hair}"/>`;
+    hairFront=`<path d="M44 31 Q45 14 60 14 Q75 14 76 31 Q70 21 60 22 Q52 22 44 31Z" fill="${hair}"/>`;
+  } else if(age==='50-59'){
+    hairBack=`<path d="M43 30 Q43 12 60 12 Q77 12 77 30 L78 50 Q72 55 67 48 L53 48 Q48 55 42 50 Z" fill="${hair}"/>`;
+    hairFront=`<path d="M44 32 Q44 14 61 14 Q76 15 76 30 Q66 20 56 26 Q49 29 44 32Z" fill="${hair}"/>`;
+  } else {
+    hairBack=`<path d="M44 30 Q43 14 60 13 Q77 14 76 30 L76 41 Q73 45 70 41 L50 41 Q47 45 44 41 Z" fill="${hair}"/>`;
+    hairFront=`<path d="M44 30 Q46 15 60 15 Q74 15 76 30 Q73 22 68 25 Q64 19 59 23 Q53 19 50 25 Q47 23 44 30Z" fill="${hair}"/>`;
+  }
+  const arm=(sgn)=>`<path d="M${cx+sgn*(S-2)} 66 Q${cx+sgn*(S+7+k)} 100 ${cx+sgn*(S+4+k*1.4)} 138" stroke="${skin}" stroke-width="${armW}" stroke-linecap="round" fill="none"/><circle cx="${cx+sgn*(S+4+k*1.4)}" cy="140" r="${5+k*0.5}" fill="${skin}"/>`;
+  const legs=`<path d="M${cx-W-1} 116 L${cx+W+1} 116 Q${cx+H+2} 126 ${cx+H} 140 Q${cx+H-2} 170 ${cx+T+3} 200 L${cx+8+k} 226 L${cx+3} 226 L${cx+1} 160 Q${cx} 155 ${cx-1} 160 L${cx-3} 226 L${cx-8-k} 226 L${cx-T-3} 200 Q${cx-H+2} 170 ${cx-H} 140 Q${cx-H-2} 126 ${cx-W-1} 116Z" fill="var(--pants)"/>`;
+  const shoes=`<ellipse cx="${cx-6-k*0.5}" cy="229" rx="8" ry="4.5" fill="var(--shoe)" stroke="var(--line)"/><ellipse cx="${cx+6+k*0.5}" cy="229" rx="8" ry="4.5" fill="var(--shoe)" stroke="var(--line)"/>`;
+  const shoulders=`<path d="M${cx-S} 64 Q${cx} 52 ${cx+S} 64 L${cx+S-2} 80 L${cx-S+2} 80Z" fill="${skin}"/>`;
+  const tank=`<path d="M${cx-S+7} 58 Q${cx} 72 ${cx+S-7} 58 L${cx+S-1} 64 Q${cx+S+1} 76 ${cx+S-2} 86 Q${cx+W+3} 100 ${cx+W+1} 118 L${cx-W-1} 118 Q${cx-W-3} 100 ${cx-S+2} 86 Q${cx-S-1} 76 ${cx-S+1} 64Z" fill="${top}"/>`;
+  const neck=`<rect x="${cx-5}" y="42" width="10" height="16" rx="4" fill="${skin}"/>`;
+  const head=`<circle cx="${cx}" cy="31" r="15" fill="${skin}"/>`;
+  const face=`<circle cx="54.5" cy="31" r="1.7" fill="var(--face)"/><circle cx="65.5" cy="31" r="1.7" fill="var(--face)"/><circle cx="51.5" cy="36.5" r="2.6" fill="#F28D8D" opacity=".35"/><circle cx="68.5" cy="36.5" r="2.6" fill="#F28D8D" opacity=".35"/><path d="M${o.goal?'54.5 37 Q60 43 65.5 37':'55.5 38 Q60 41.5 64.5 38'}" stroke="var(--lip)" stroke-width="1.7" fill="none" stroke-linecap="round"/>`;
+  let zones='';
+  if(o.zones){
+    zones=`<rect class="zone-shape" data-z="full" x="${cx-H-12}" y="10" width="${2*H+24}" height="224" rx="24" style="opacity:0"/>
+      <ellipse class="zone-shape" data-z="arms" cx="${cx-(S+5+k*0.8)}" cy="102" rx="${6+k}" ry="24"/><ellipse class="zone-shape" data-z="arms" cx="${cx+(S+5+k*0.8)}" cy="102" rx="${6+k}" ry="24"/>
+      <ellipse class="zone-shape" data-z="waist" cx="${cx}" cy="108" rx="${W+4}" ry="11"/>
+      <ellipse class="zone-shape" data-z="hips" cx="${cx}" cy="142" rx="${H+3}" ry="14"/>
+      <rect class="zone-shape" data-z="back" x="${cx-S+3}" y="60" width="${2*S-6}" height="24" rx="10"/>`;
+  }
+  return `<g>${hairBack}${arm(-1)}${arm(1)}${legs}${shoes}${neck}${shoulders}${tank}${head}${face}${hairFront}${zones}</g>`;
+}
+function womanSVG(o){ return `<svg viewBox="${o.vb||'0 0 120 240'}" aria-hidden="true" preserveAspectRatio="xMidYMax meet">${woman(o)}</svg>`; }
+function heroSVG(){
+  const g=(x,o)=>`<g transform="translate(${x} 0)">${woman(o)}</g>`;
+  return `<svg viewBox="0 0 320 240" aria-hidden="true">${g(0,{k:1,age:'50-59',skin:SKINS[1],top:TOPS[1]})}${g(200,{k:2,age:'60+',skin:SKINS[0],top:TOPS[2]})}${g(100,{k:1,age:'40-49',skin:SKINS[2],top:'var(--accent)'})}</svg>`;
+}
+function peopleSVG(n){
+  let s=''; const ages=['40-49','50-59','60+'];
+  for(let i=0;i<10;i++){ const on=i<n;
+    s+=`<g transform="translate(${i*33} 0) scale(.3)" style="opacity:0;animation:optIn .35s ease ${i*90}ms forwards"><g opacity="${on?1:.28}">${woman({k:i%4,age:ages[i%3],skin:SKINS[i%4],top:on?'var(--accent)':'var(--muted)'})}</g></g>`; }
+  return `<svg viewBox="0 0 330 72" style="max-height:88px" aria-hidden="true">${s}</svg>`;
+}
+function muscleSVG(){
+  let s=''; const h=[80,74,68,62,56];
+  h.forEach((v,i)=>{ s+=`<rect x="${20+i*52}" y="${100-v}" width="36" height="${v}" rx="6" fill="var(--accent)" opacity="${1-i*0.15}"><animate attributeName="height" from="0" to="${v}" dur=".6s" begin="${i*0.12}s" fill="freeze"/><animate attributeName="y" from="100" to="${100-v}" dur=".6s" begin="${i*0.12}s" fill="freeze"/></rect><text x="${38+i*52}" y="116" text-anchor="middle" font-size="11" fill="var(--muted)">${30+i*10}s</text>`; });
+  return `<svg viewBox="0 0 280 122" aria-hidden="true">${s}<text x="140" y="12" text-anchor="middle" font-size="12" font-weight="700" fill="var(--text)">Muscle, decade by decade</text></svg>`;
+}
+function pathSVG(){
+  return `<svg viewBox="0 0 280 110" aria-hidden="true"><path d="M20 90 C 60 20, 90 100, 130 50 S 200 80, 260 20" fill="none" stroke="var(--line)" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 10"/><path d="M20 90 L260 20" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="300" stroke-dashoffset="300"><animate attributeName="stroke-dashoffset" to="0" dur="1s" fill="freeze"/></path><text x="24" y="106" font-size="12" fill="var(--muted)">Mixed advice</text><text x="256" y="44" text-anchor="end" font-size="12" font-weight="700" fill="var(--accent)">One clear plan</text></svg>`;
+}
+function platesSVG(v){
+  const col=(x,label,h,note)=>`<g transform="translate(${x} 0)"><text x="40" y="12" text-anchor="middle" font-size="12" font-weight="700" fill="var(--text)">${label}</text><ellipse cx="40" cy="30" rx="34" ry="11" fill="var(--surface)" stroke="var(--line)" stroke-width="3"/><ellipse cx="40" cy="29" rx="18" ry="5" fill="var(--accent-2)" opacity=".8"/><rect x="22" y="${92-h}" width="36" height="${h}" rx="6" fill="var(--accent)">${note?`<animate attributeName="height" from="50" to="${h}" dur="1s" begin=".5s" fill="freeze"/><animate attributeName="y" from="42" to="${92-h}" dur="1s" begin=".5s" fill="freeze"/>`:''}</rect>${note?`<text x="40" y="${88-h}" text-anchor="middle" font-size="11" font-weight="800" fill="var(--accent)" opacity="0">${note}<animate attributeName="opacity" to="1" dur=".3s" begin="1.4s" fill="freeze"/></text>`:''}</g>`;
+  let kg='';
+  if(v.kg){ for(let i=0;i<10;i++) kg+=`<rect x="${15+i*25}" y="108" width="20" height="10" rx="3" fill="var(--accent)" opacity="0"><animate attributeName="opacity" to="${0.35+i*0.065}" dur=".2s" begin="${1.6+i*0.1}s" fill="freeze"/></rect>`; kg+=`<text x="140" y="136" text-anchor="middle" font-size="11.5" fill="var(--muted)">≈ 7 kg in 10 years, if nothing changes</text>`; }
+  else kg+=`<text x="140" y="124" text-anchor="middle" font-size="12" font-weight="700" fill="var(--accent)">Stronger muscles = more energy used</text>`;
+  return `<svg viewBox="0 0 280 142" aria-hidden="true">${col(40,esc(v.from),50,'')}${col(160,esc(v.to),36,'−200 kcal')}<text x="140" y="80" text-anchor="middle" font-size="10.5" fill="var(--muted)">calories</text><text x="140" y="93" text-anchor="middle" font-size="10.5" fill="var(--muted)">used</text>${kg}</svg>`;
+}
+function minutesSVG(t){
+  const full=240, startW=Math.max(40, Math.min(full, t.mins/60*full)), endW=Math.max(40, t.hi/60*full);
+  const lbl=`${t.plan} min`;
+  let sq=''; for(let i=0;i<5;i++) sq+=`<rect x="${40+i*42}" y="66" width="32" height="32" rx="7" fill="var(--accent)" opacity="0"><animate attributeName="opacity" to="1" dur=".25s" begin="${1+i*0.18}s" fill="freeze"/></rect><text x="${56+i*42}" y="112" text-anchor="middle" font-size="10.5" fill="var(--muted)">${['Mon','Tue','Wed','Thu','Fri'][i]}</text>`;
+  const week = t.lo===t.hi ? `${t.lo} min × 5 days = ${t.lo*5} min a week` : `${t.plan} min × 5 days = ${t.lo*5}–${t.hi*5} min a week`;
+  return `<svg viewBox="0 -6 280 140" aria-hidden="true">
+    <rect x="20" y="16" width="${full}" height="24" rx="12" fill="var(--line)"/>
+    <rect x="20" y="16" width="${startW}" height="24" rx="12" fill="var(--accent-2)"><animate attributeName="width" from="${startW}" to="${endW}" dur="1s" begin=".5s" fill="freeze"/></rect>
+    <text x="20" y="9" font-size="12" font-weight="700" fill="var(--text)">You thought: ${esc(t.label)}<animate attributeName="opacity" values="1;0" dur=".3s" begin=".5s" fill="freeze"/></text>
+    <text x="20" y="9" font-size="12" font-weight="800" fill="var(--text)" opacity="0">Your plan: ${lbl}<animate attributeName="opacity" to="1" dur=".3s" begin="1.2s" fill="freeze"/></text>
+    ${sq}
+    <text x="140" y="130" text-anchor="middle" font-size="12" font-weight="700" fill="var(--text)">${week}</text></svg>`;
+}
+function typeSVG(k){
+  const icons={
+    rule:'<path d="M14 38 26 26l8 8 16-18" fill="none" stroke="var(--accent-ink)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>',
+    battery:'<rect x="12" y="20" width="30" height="18" rx="4" fill="none" stroke="var(--accent-ink)" stroke-width="4"/><rect x="42" y="25" width="4" height="8" rx="1" fill="var(--accent-ink)"/><rect x="16" y="24" width="9" height="10" fill="var(--accent-ink)"/>',
+    stalled:'<path d="M14 40h12V28h12V16h10" fill="none" stroke="var(--accent-ink)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>',
+    strength:'<path d="M12 29h32M16 21v16M40 21v16M10 25v8M46 25v8" stroke="var(--accent-ink)" stroke-width="5" stroke-linecap="round"/>',
+    clarity:'<circle cx="28" cy="28" r="14" fill="none" stroke="var(--accent-ink)" stroke-width="4"/><path d="M28 18v10l7 5" stroke="var(--accent-ink)" stroke-width="4" stroke-linecap="round" fill="none"/>'};
+  return `<svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="28" fill="var(--accent)"/>${icons[k]||icons.rule}</svg>`;
+}
+function laurel(flip){
+  let l=''; for(let i=0;i<7;i++){ const y=12+i*11, x=18-Math.sin(i/6*Math.PI)*10; l+=`<ellipse cx="${x}" cy="${y}" rx="7" ry="3.4" transform="rotate(${-40+i*8} ${x} ${y})" fill="var(--accent-2)"/>`; }
+  return `<svg width="34" height="92" viewBox="0 0 34 92" aria-hidden="true" style="${flip?'transform:scaleX(-1)':''}">${l}</svg>`;
+}
+
+window.__quiz = { state, compute, FLOW, go };
+render();
+</script>
+</body>
+</html>
